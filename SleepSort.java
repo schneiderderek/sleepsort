@@ -17,7 +17,7 @@ class sleepEl extends Thread
 		{
 			System.out.println("Something went wrong");
 		}
-		System.out.println(wait);
+		System.out.print("|" + wait + "|");
 	}
 }
 
@@ -33,6 +33,18 @@ public class SleepSort
 			arr[a] = rand.nextInt(100) ;
 		}
 		printSorted(arr);
+		
+		
+		try
+		{
+			Thread.sleep(1000);
+			System.out.println("\nDone");
+		}
+		catch(InterruptedException e)
+		{
+			System.out.println("Something went wrong");
+		}
+
 	}
 	public static void printSorted(int[] marray)
 	{
